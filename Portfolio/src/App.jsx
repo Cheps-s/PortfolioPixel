@@ -1,158 +1,16 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';useEffect, useRef, useCallback, useMemo } from 'react';
-import { import { 
-  X, Github, Linkedin, Mail, ExternalLink, kedin, Mail, ExternalLink, 
-  ChevronRight, Sword, Shield, Heart, Star, ight, Sword, Shield, Heart, Star, 
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { 
+  X, Github, Linkedin, Mail, ExternalLink, 
+  ChevronRight, Sword, Shield, Heart, Star, 
   Zap, Trophy, Scroll, Volume2, VolumeX,
   Moon, Sun, MapPin, Code2, Terminal, Cpu
-} from 'lucide-react';ide-react';
-
-// --- Enhanced Configuration ----- Enhanced Configuration ---
-const TILE_SIZE = 64;onst TILE_SIZE = 64;
-const MAP_WIDTH = 24;const MAP_WIDTH = 24;
-const MAP_HEIGHT = 16;16;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}  );    </div>      <p className="text-white">Enhanced PortfolioPixel Game</p>      {/* Your game content */}    <div className={`relative w-screen h-screen overflow-hidden bg-[#2d4c1e]`}>  return (  }, [isMoving, movePlayer, facing]);    return () => cancelAnimationFrame(gameLoop);    gameLoop();    };      gameLoopRef.current = requestAnimationFrame(gameLoop);      }        movePlayer(PLAYER_SPEED * (facing === 'right' ? 1 : -1), 0);      if (isMoving) {    const gameLoop = () => {  useEffect(() => {  }, []);    });      return prev;      }        setFacing('left');      } else if (e.key === 'ArrowRight' || e.key === 'd') {        setFacing('right');      } else if (e.key === 'ArrowLeft' || e.key === 'a') {        setFacing('up');      } else if (e.key === 'ArrowDown' || e.key === 's') {        setFacing('down');      if (e.key === 'ArrowUp' || e.key === 'w') {    setKeys(prev => {  const handleKeyUp = useCallback((e) => {  }, [playSound]);    });      return prev;      }        playSound('step');        setFacing('right');      } else if (e.key === 'ArrowRight' || e.key === 'd') {        playSound('step');        setFacing('left');      } else if (e.key === 'ArrowLeft' || e.key === 'a') {        playSound('step');        setFacing('down');      } else if (e.key === 'ArrowDown' || e.key === 's') {        playSound('step');        setFacing('up');      if (e.key === 'ArrowUp' || e.key === 'w') {    setKeys(prev => {  const handleKeyDown = useCallback((e) => {  }, []);    setIsMoving(true);    });      return { x: newX, y: newY };      const newY = prev.y + dy;      const newX = prev.x + dx;    setPlayerPos(prev => {  const movePlayer = useCallback((dx, dy) => {  const gameLoopRef = useRef();  const { playSound, muted, setMuted } = useSound();    const [particles, setParticles] = useState([]);  const [isNight, setIsNight] = useState(false);  const [isMoving, setIsMoving] = useState(false);  const [facing, setFacing] = useState('down');  const [activeBuilding, setActiveBuilding] = useState(null);  const [keys, setKeys] = useState({});  const [playerPos, setPlayerPos] = useState({ x: 12 * TILE_SIZE, y: 8 * TILE_SIZE });export default function App() {};  );    />      }}        animationDuration: '1s'        backgroundColor: color,        top: y,         left: x,       style={{       className="absolute w-2 h-2 pointer-events-none animate-ping"    <div   return (  }, [onComplete]);    return () => clearTimeout(timer);    const timer = setTimeout(onComplete, 1000);  useEffect(() => {const Particle = ({ x, y, color, onComplete }) => {// --- Particle System ---};  return { playSound, muted, setMuted };  }, [muted]);    }        break;      default:        break;        oscillator.stop(audioContext.currentTime + 0.2);        oscillator.frequency.exponentialRampToValueAtTime(100, audioContext.currentTime + 0.2);        oscillator.start(audioContext.currentTime);        oscillator.type = 'sawtooth';        gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);        oscillator.frequency.value = 400;      case 'close':        break;        oscillator.stop(audioContext.currentTime + 0.15);        oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.1);        oscillator.start(audioContext.currentTime);        oscillator.type = 'square';        gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);        oscillator.frequency.value = 600;      case 'interact':        break;        oscillator.stop(audioContext.currentTime + 0.1);        oscillator.start(audioContext.currentTime);        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);        oscillator.frequency.value = 150;      case 'step':    switch(type) {        gainNode.connect(audioContext.destination);    oscillator.connect(gainNode);        const gainNode = audioContext.createGain();    const oscillator = audioContext.createOscillator();    const audioContext = new (window.AudioContext || window.webkitAudioContext)();        if (muted) return;  const playSound = useCallback((type) => {    const [muted, setMuted] = useState(false);const useSound = () => {// --- Sound Effects (Simulated with AudioContext for pure React solution) ---const SPRINT_SPEED = 8;const PLAYER_SPEED = 5;const PLAYER_SPEED = 5;
+} from 'lucide-react';
+
+// --- Enhanced Configuration ---
+const TILE_SIZE = 64;
+const MAP_WIDTH = 24;
+const MAP_HEIGHT = 16;
+const PLAYER_SPEED = 5;
 const SPRINT_SPEED = 8;
 
 // --- Sound Effects (Simulated with AudioContext for pure React solution) ---
@@ -302,9 +160,16 @@ const Sprite = ({ type, color, label, isNight, isHovered }) => {
 const BUILDINGS = [
   { id: 'about', x: 3, y: 3, type: 'castle', color: 'bg-orange-400', label: 'About Me', title: 'The Castle', icon: Shield,
     content: 'Welcome to my kingdom! I am a Full Stack Developer with 5+ years of experience crafting digital experiences. I specialize in React, Node.js, and cloud architecture.',
+    images: [
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop'
+    ],
     stats: [{ label: 'Experience', value: '5+ Years' }, { label: 'Projects', value: '50+' }, { label: 'Clients', value: '30+' }] },
   { id: 'skills', x: 18, y: 3, type: 'tower', color: 'bg-gray-400', label: 'Skills', title: 'The Tech Tower', icon: Cpu,
     content: 'My arsenal of technologies and tools that I wield to build amazing products.',
+    images: [
+      'https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=400&h=300&fit=crop'
+    ],
     skills: [
       { name: 'React/Next.js', level: 95, color: 'bg-cyan-400' },
       { name: 'TypeScript', level: 90, color: 'bg-blue-400' },
@@ -315,14 +180,22 @@ const BUILDINGS = [
     ] },
   { id: 'projects', x: 5, y: 11, type: 'shop', color: 'bg-blue-500', label: 'Projects', title: 'Project Bazaar', icon: Code2,
     content: 'Browse my collection of completed quests and adventures in code.',
+    images: [
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1555099962-4199f1a96b10?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop'
+    ],
     projects: [
-      { name: 'E-Commerce Platform', tech: 'Next.js, Stripe, PostgreSQL', desc: 'Full-stack shopping experience with real-time inventory' },
-      { name: 'AI Dashboard', tech: 'React, Python, TensorFlow', desc: 'Data visualization for machine learning models' },
-      { name: 'Game Engine', tech: 'TypeScript, WebGL', desc: 'Browser-based 2D game engine with physics' },
-      { name: 'Social App', tech: 'React Native, Firebase', desc: 'Mobile app connecting local communities' }
+      { name: 'E-Commerce Platform', tech: 'Next.js, Stripe, PostgreSQL', desc: 'Full-stack shopping experience with real-time inventory', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&h=150&fit=crop' },
+      { name: 'AI Dashboard', tech: 'React, Python, TensorFlow', desc: 'Data visualization for machine learning models', image: 'https://images.unsplash.com/photo-1555099962-4199f1a96b10?w=200&h=150&fit=crop' },
+      { name: 'Game Engine', tech: 'TypeScript, WebGL', desc: 'Browser-based 2D game engine with physics', image: 'https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=200&h=150&fit=crop' },
+      { name: 'Social App', tech: 'React Native, Firebase', desc: 'Mobile app connecting local communities', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&h=150&fit=crop' }
     ] },
   { id: 'contact', x: 19, y: 11, type: 'chest', color: 'bg-purple-500', label: 'Contact', title: 'Treasure Chest', icon: Mail,
     content: 'Found my work interesting? Let\'s collaborate on the next big adventure!',
+    images: [
+      'https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=400&h=300&fit=crop'
+    ],
     contact: { email: 'alex.dev@pixelworld.com', github: 'github.com/alexdev', linkedin: 'linkedin.com/in/alexdev' } },
 ];
 
@@ -360,7 +233,14 @@ const SkillBar = ({ name, level, color, delay }) => (
 );
 
 const ProjectCard = ({ project, index }) => (
-  <div className="bg-slate-700 p-4 border-4 border-black hover:border-yellow-400 transition-all duration-300 group cursor-pointer transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#facc15]">
+  <div className="bg-slate-700 p-4 border-4 border-black hover:border-yellow-400 transition-all duration-300 group cursor-pointer transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#facc15] animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+    {project.image && (
+      <img 
+        src={project.image} 
+        alt={project.name}
+        className="w-full h-32 object-cover border-2 border-black mb-3 hover:scale-105 transition-transform"
+      />
+    )}
     <div className="flex justify-between items-start mb-2">
       <h3 className="text-yellow-400 font-bold text-lg group-hover:text-yellow-300">{project.name}</h3>
       <ExternalLink size={16} className="text-gray-400 group-hover:text-white" />
@@ -368,8 +248,8 @@ const ProjectCard = ({ project, index }) => (
     <p className="text-cyan-400 text-xs mb-2 font-mono">{project.tech}</p>
     <p className="text-gray-300 text-sm">{project.desc}</p>
     <div className="mt-3 flex gap-2">
-      <span className="text-[10px] bg-black/50 px-2 py-1 text-gray-400">View Code</span>
-      <span className="text-[10px] bg-black/50 px-2 py-1 text-gray-400">Live Demo</span>
+      <span className="text-[10px] bg-black/50 px-2 py-1 text-gray-400 hover:bg-yellow-400/20 cursor-pointer transition-colors">View Code</span>
+      <span className="text-[10px] bg-black/50 px-2 py-1 text-gray-400 hover:bg-yellow-400/20 cursor-pointer transition-colors">Live Demo</span>
     </div>
   </div>
 );
@@ -395,17 +275,17 @@ const Modal = ({ building, onClose, playSound }) => {
         {/* Header */}
         <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 border-b-4 border-white flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <div className={`p-3 ${building.color} border-4 border-black rounded-lg`}>
+            <div className={`p-3 ${building.color} border-4 border-black rounded-lg animate-bounce`}>
               <Icon size={24} className="text-white" />
             </div>
             <div>
-              <h2 className="text-2xl text-yellow-400 uppercase tracking-widest font-bold">{building.title}</h2>
+              <h2 className="text-2xl text-yellow-400 uppercase tracking-widest font-bold animate-pulse">{building.title}</h2>
               <p className="text-xs text-gray-400 mt-1">Level 99 {building.id === 'about' ? 'Developer' : building.id === 'skills' ? 'Wizard' : building.id === 'projects' ? 'Merchant' : 'Treasure Hunter'}</p>
             </div>
           </div>
           <button 
             onClick={() => { playSound('close'); onClose(); }}
-            className="hover:bg-red-500/20 p-2 rounded transition-colors group"
+            className="hover:bg-red-500/20 p-2 rounded transition-colors group hover:scale-110"
           >
             <X size={32} className="text-gray-400 group-hover:text-red-400" />
           </button>
@@ -415,9 +295,10 @@ const Modal = ({ building, onClose, playSound }) => {
         <div className="p-8 overflow-y-auto pixel-scroll font-sans text-lg leading-relaxed text-gray-200 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMWUyOTNiIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyZTRhNjYiIG9wYWNpdHk9IjAuMiIvPgo8L3N2Zz4=')]">
           
           {building.id === 'about' && (
-            <div className="space-y-6">
+            <div className="space-y-6 animate-fade-in">
+              <ImageGallery images={building.images} />
               <div className="flex flex-col md:flex-row gap-6 items-start">
-                <div className={`w-32 h-32 ${building.color} border-4 border-black shrink-0 flex items-center justify-center relative overflow-hidden group`}>
+                <div className={`w-32 h-32 ${building.color} border-4 border-black shrink-0 flex items-center justify-center relative overflow-hidden group animate-spin-slow`}>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                   <span className="text-5xl animate-bounce">👨‍💻</span>
                 </div>
@@ -425,7 +306,7 @@ const Modal = ({ building, onClose, playSound }) => {
                   <p className="mb-4 text-lg">{building.content}</p>
                   <div className="grid grid-cols-3 gap-4 mt-6">
                     {building.stats.map((stat, i) => (
-                      <div key={i} className="bg-slate-700/50 p-3 border-2 border-slate-600 text-center">
+                      <div key={i} className="bg-slate-700/50 p-3 border-2 border-slate-600 text-center animate-scale-in" style={{ animationDelay: `${i * 100}ms` }}>
                         <div className="text-2xl font-bold text-yellow-400">{stat.value}</div>
                         <div className="text-xs text-gray-400 uppercase">{stat.label}</div>
                       </div>
@@ -433,27 +314,25 @@ const Modal = ({ building, onClose, playSound }) => {
                   </div>
                 </div>
               </div>
-              <div className="bg-slate-700/30 p-4 border-l-4 border-yellow-400">
-                <p className="italic text-gray-300">"Code is like humor. When you have to explain it, it's bad." – Cory House</p>
-              </div>
             </div>
           )}
 
           {building.id === 'skills' && (
-            <div className="space-y-2">
+            <div className="space-y-2 animate-fade-in">
+              <ImageGallery images={building.images} />
               <p className="mb-6">{building.content}</p>
               <div className="grid gap-4">
                 {building.skills.map((skill, i) => (
                   <SkillBar key={i} {...skill} delay={i * 100} />
                 ))}
               </div>
-              <div className="mt-6 p-4 bg-slate-700/30 border-2 border-slate-600 rounded">
+              <div className="mt-6 p-4 bg-slate-700/30 border-2 border-slate-600 rounded animate-slide-up">
                 <h4 className="text-yellow-400 font-bold mb-2 flex items-center gap-2">
-                  <Trophy size={16} /> Achievements Unlocked
+                  <Trophy size={16} className="animate-spin" /> Achievements Unlocked
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {['Open Source Contributor', 'Hackathon Winner', 'Tech Speaker', 'Mentor'].map((ach, i) => (
-                    <span key={i} className="bg-yellow-400/20 text-yellow-300 px-3 py-1 text-xs border border-yellow-400/50 rounded">
+                    <span key={i} className="bg-yellow-400/20 text-yellow-300 px-3 py-1 text-xs border border-yellow-400/50 rounded animate-bounce" style={{ animationDelay: `${i * 100}ms` }}>
                       {ach}
                     </span>
                   ))}
@@ -463,7 +342,8 @@ const Modal = ({ building, onClose, playSound }) => {
           )}
 
           {building.id === 'projects' && (
-            <div className="space-y-4">
+            <div className="space-y-4 animate-fade-in">
+              <ImageGallery images={building.images} />
               <p className="mb-6">{building.content}</p>
               <div className="grid md:grid-cols-2 gap-4">
                 {building.projects.map((proj, i) => (
@@ -474,27 +354,25 @@ const Modal = ({ building, onClose, playSound }) => {
           )}
 
           {building.id === 'contact' && (
-            <div className="space-y-6">
+            <div className="space-y-6 animate-fade-in">
+              <ImageGallery images={building.images} />
               <p className="text-xl">{building.content}</p>
               <div className="grid md:grid-cols-3 gap-4 mt-8">
-                <a href={`mailto:${building.contact.email}`} className="bg-red-500/20 border-2 border-red-500 p-6 text-center hover:bg-red-500/40 transition-all group">
+                <a href={`mailto:${building.contact.email}`} className="bg-red-500/20 border-2 border-red-500 p-6 text-center hover:bg-red-500/40 transition-all group animate-slide-up">
                   <Mail size={32} className="mx-auto mb-2 text-red-400 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-bold">Email</div>
                   <div className="text-xs text-gray-400 mt-1 truncate">{building.contact.email}</div>
                 </a>
-                <a href={`https://${building.contact.github}`} target="_blank" rel="noreferrer" className="bg-gray-700/50 border-2 border-gray-500 p-6 text-center hover:bg-gray-700 transition-all group">
+                <a href={`https://${building.contact.github}`} target="_blank" rel="noreferrer" className="bg-gray-700/50 border-2 border-gray-500 p-6 text-center hover:bg-gray-700 transition-all group animate-slide-up" style={{ animationDelay: '100ms' }}>
                   <Github size={32} className="mx-auto mb-2 text-white group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-bold">GitHub</div>
                   <div className="text-xs text-gray-400 mt-1 truncate">{building.contact.github}</div>
                 </a>
-                <a href={`https://${building.contact.linkedin}`} target="_blank" rel="noreferrer" className="bg-blue-500/20 border-2 border-blue-500 p-6 text-center hover:bg-blue-500/40 transition-all group">
+                <a href={`https://${building.contact.linkedin}`} target="_blank" rel="noreferrer" className="bg-blue-500/20 border-2 border-blue-500 p-6 text-center hover:bg-blue-500/40 transition-all group animate-slide-up" style={{ animationDelay: '200ms' }}>
                   <Linkedin size={32} className="mx-auto mb-2 text-blue-400 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-bold">LinkedIn</div>
                   <div className="text-xs text-gray-400 mt-1 truncate">{building.contact.linkedin}</div>
                 </a>
-              </div>
-              <div className="mt-8 p-4 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 border-2 border-yellow-400 rounded text-center">
-                <p className="text-yellow-300 font-bold">🎮 Currently available for freelance quests and full-time adventures!</p>
               </div>
             </div>
           )}
@@ -505,7 +383,257 @@ const Modal = ({ building, onClose, playSound }) => {
           <div className="text-xs text-gray-500">Press ESC to close</div>
           <button 
             onClick={() => { playSound('close'); onClose(); }}
-            className="bg-red-500 px-6 py-3 text-white border-b-4 border-red-700 active:border-b-0 active:translate-y-1 transition-all uppercase text-sm font-bold hover:bg-red-400"
+            className="bg-red-500 px-6 py-3 text-white border-b-4 border-red-700 active:border-b-0 active:translate-y-1 transition-all uppercase text-sm font-bold hover:bg-red-400 hover:scale-105"
+          >
+            Close [X]
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Add this new component for displaying images in modals
+const ImageGallery = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="mb-6">
+      <div className="relative w-full h-64 bg-black/30 border-4 border-yellow-400 overflow-hidden group">
+        <img 
+          src={images[currentIndex]} 
+          alt="Portfolio" 
+          className="w-full h-full object-cover animate-fade-in"
+        />
+        {images.length > 1 && (
+          <>
+            <button 
+              onClick={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-yellow-400 text-white p-2 rounded transition-all z-10"
+            >
+              ←
+            </button>
+            <button 
+              onClick={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-yellow-400 text-white p-2 rounded transition-all z-10"
+            >
+              →
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`w-2 h-2 rounded-full transition-all ${i === currentIndex ? 'bg-yellow-400 w-4' : 'bg-white/50'}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+// Update BUILDINGS with images
+const BUILDINGS = [
+  { id: 'about', x: 3, y: 3, type: 'castle', color: 'bg-orange-400', label: 'About Me', title: 'The Castle', icon: Shield,
+    content: 'Welcome to my kingdom! I am a Full Stack Developer with 5+ years of experience crafting digital experiences. I specialize in React, Node.js, and cloud architecture.',
+    images: [
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop'
+    ],
+    stats: [{ label: 'Experience', value: '5+ Years' }, { label: 'Projects', value: '50+' }, { label: 'Clients', value: '30+' }] },
+  { id: 'skills', x: 18, y: 3, type: 'tower', color: 'bg-gray-400', label: 'Skills', title: 'The Tech Tower', icon: Cpu,
+    content: 'My arsenal of technologies and tools that I wield to build amazing products.',
+    images: [
+      'https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=400&h=300&fit=crop'
+    ],
+    skills: [
+      { name: 'React/Next.js', level: 95, color: 'bg-cyan-400' },
+      { name: 'TypeScript', level: 90, color: 'bg-blue-400' },
+      { name: 'Node.js', level: 85, color: 'bg-green-400' },
+      { name: 'Python', level: 80, color: 'bg-yellow-400' },
+      { name: 'AWS/Cloud', level: 75, color: 'bg-orange-400' },
+      { name: 'Three.js/WebGL', level: 70, color: 'bg-purple-400' }
+    ] },
+  { id: 'projects', x: 5, y: 11, type: 'shop', color: 'bg-blue-500', label: 'Projects', title: 'Project Bazaar', icon: Code2,
+    content: 'Browse my collection of completed quests and adventures in code.',
+    images: [
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1555099962-4199f1a96b10?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop'
+    ],
+    projects: [
+      { name: 'E-Commerce Platform', tech: 'Next.js, Stripe, PostgreSQL', desc: 'Full-stack shopping experience with real-time inventory', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&h=150&fit=crop' },
+      { name: 'AI Dashboard', tech: 'React, Python, TensorFlow', desc: 'Data visualization for machine learning models', image: 'https://images.unsplash.com/photo-1555099962-4199f1a96b10?w=200&h=150&fit=crop' },
+      { name: 'Game Engine', tech: 'TypeScript, WebGL', desc: 'Browser-based 2D game engine with physics', image: 'https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=200&h=150&fit=crop' },
+      { name: 'Social App', tech: 'React Native, Firebase', desc: 'Mobile app connecting local communities', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&h=150&fit=crop' }
+    ] },
+  { id: 'contact', x: 19, y: 11, type: 'chest', color: 'bg-purple-500', label: 'Contact', title: 'Treasure Chest', icon: Mail,
+    content: 'Found my work interesting? Let\'s collaborate on the next big adventure!',
+    images: [
+      'https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=400&h=300&fit=crop'
+    ],
+    contact: { email: 'alex.dev@pixelworld.com', github: 'github.com/alexdev', linkedin: 'linkedin.com/in/alexdev' } },
+];
+
+// Update ProjectCard component
+const ProjectCard = ({ project, index }) => (
+  <div className="bg-slate-700 p-4 border-4 border-black hover:border-yellow-400 transition-all duration-300 group cursor-pointer transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#facc15] animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+    {project.image && (
+      <img 
+        src={project.image} 
+        alt={project.name}
+        className="w-full h-32 object-cover border-2 border-black mb-3 hover:scale-105 transition-transform"
+      />
+    )}
+    <div className="flex justify-between items-start mb-2">
+      <h3 className="text-yellow-400 font-bold text-lg group-hover:text-yellow-300">{project.name}</h3>
+      <ExternalLink size={16} className="text-gray-400 group-hover:text-white" />
+    </div>
+    <p className="text-cyan-400 text-xs mb-2 font-mono">{project.tech}</p>
+    <p className="text-gray-300 text-sm">{project.desc}</p>
+    <div className="mt-3 flex gap-2">
+      <span className="text-[10px] bg-black/50 px-2 py-1 text-gray-400 hover:bg-yellow-400/20 cursor-pointer transition-colors">View Code</span>
+      <span className="text-[10px] bg-black/50 px-2 py-1 text-gray-400 hover:bg-yellow-400/20 cursor-pointer transition-colors">Live Demo</span>
+    </div>
+  </div>
+);
+
+// Update Modal to include images
+const Modal = ({ building, onClose, playSound }) => {
+  useEffect(() => {
+    if (building) playSound('interact');
+  }, [building, playSound]);
+
+  if (!building) return null;
+
+  const Icon = building.icon || Star;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-slate-800 border-4 border-white w-full max-w-3xl max-h-[85vh] flex flex-col shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] relative overflow-hidden">
+        {/* Decorative corners */}
+        <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-yellow-400"></div>
+        <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-yellow-400"></div>
+        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-yellow-400"></div>
+        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-yellow-400"></div>
+
+        {/* Header */}
+        <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 border-b-4 border-white flex justify-between items-center">
+          <div className="flex items-center gap-4">
+            <div className={`p-3 ${building.color} border-4 border-black rounded-lg animate-bounce`}>
+              <Icon size={24} className="text-white" />
+            </div>
+            <div>
+              <h2 className="text-2xl text-yellow-400 uppercase tracking-widest font-bold animate-pulse">{building.title}</h2>
+              <p className="text-xs text-gray-400 mt-1">Level 99 {building.id === 'about' ? 'Developer' : building.id === 'skills' ? 'Wizard' : building.id === 'projects' ? 'Merchant' : 'Treasure Hunter'}</p>
+            </div>
+          </div>
+          <button 
+            onClick={() => { playSound('close'); onClose(); }}
+            className="hover:bg-red-500/20 p-2 rounded transition-colors group hover:scale-110"
+          >
+            <X size={32} className="text-gray-400 group-hover:text-red-400" />
+          </button>
+        </div>
+        
+        {/* Content */}
+        <div className="p-8 overflow-y-auto pixel-scroll font-sans text-lg leading-relaxed text-gray-200 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMWUyOTNiIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyZTRhNjYiIG9wYWNpdHk9IjAuMiIvPgo8L3N2Zz4=')]">
+          
+          {building.id === 'about' && (
+            <div className="space-y-6 animate-fade-in">
+              <ImageGallery images={building.images} />
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className={`w-32 h-32 ${building.color} border-4 border-black shrink-0 flex items-center justify-center relative overflow-hidden group animate-spin-slow`}>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                  <span className="text-5xl animate-bounce">👨‍💻</span>
+                </div>
+                <div className="flex-1">
+                  <p className="mb-4 text-lg">{building.content}</p>
+                  <div className="grid grid-cols-3 gap-4 mt-6">
+                    {building.stats.map((stat, i) => (
+                      <div key={i} className="bg-slate-700/50 p-3 border-2 border-slate-600 text-center animate-scale-in" style={{ animationDelay: `${i * 100}ms` }}>
+                        <div className="text-2xl font-bold text-yellow-400">{stat.value}</div>
+                        <div className="text-xs text-gray-400 uppercase">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {building.id === 'skills' && (
+            <div className="space-y-2 animate-fade-in">
+              <ImageGallery images={building.images} />
+              <p className="mb-6">{building.content}</p>
+              <div className="grid gap-4">
+                {building.skills.map((skill, i) => (
+                  <SkillBar key={i} {...skill} delay={i * 100} />
+                ))}
+              </div>
+              <div className="mt-6 p-4 bg-slate-700/30 border-2 border-slate-600 rounded animate-slide-up">
+                <h4 className="text-yellow-400 font-bold mb-2 flex items-center gap-2">
+                  <Trophy size={16} className="animate-spin" /> Achievements Unlocked
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {['Open Source Contributor', 'Hackathon Winner', 'Tech Speaker', 'Mentor'].map((ach, i) => (
+                    <span key={i} className="bg-yellow-400/20 text-yellow-300 px-3 py-1 text-xs border border-yellow-400/50 rounded animate-bounce" style={{ animationDelay: `${i * 100}ms` }}>
+                      {ach}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {building.id === 'projects' && (
+            <div className="space-y-4 animate-fade-in">
+              <ImageGallery images={building.images} />
+              <p className="mb-6">{building.content}</p>
+              <div className="grid md:grid-cols-2 gap-4">
+                {building.projects.map((proj, i) => (
+                  <ProjectCard key={i} project={proj} index={i} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {building.id === 'contact' && (
+            <div className="space-y-6 animate-fade-in">
+              <ImageGallery images={building.images} />
+              <p className="text-xl">{building.content}</p>
+              <div className="grid md:grid-cols-3 gap-4 mt-8">
+                <a href={`mailto:${building.contact.email}`} className="bg-red-500/20 border-2 border-red-500 p-6 text-center hover:bg-red-500/40 transition-all group animate-slide-up">
+                  <Mail size={32} className="mx-auto mb-2 text-red-400 group-hover:scale-110 transition-transform" />
+                  <div className="text-sm font-bold">Email</div>
+                  <div className="text-xs text-gray-400 mt-1 truncate">{building.contact.email}</div>
+                </a>
+                <a href={`https://${building.contact.github}`} target="_blank" rel="noreferrer" className="bg-gray-700/50 border-2 border-gray-500 p-6 text-center hover:bg-gray-700 transition-all group animate-slide-up" style={{ animationDelay: '100ms' }}>
+                  <Github size={32} className="mx-auto mb-2 text-white group-hover:scale-110 transition-transform" />
+                  <div className="text-sm font-bold">GitHub</div>
+                  <div className="text-xs text-gray-400 mt-1 truncate">{building.contact.github}</div>
+                </a>
+                <a href={`https://${building.contact.linkedin}`} target="_blank" rel="noreferrer" className="bg-blue-500/20 border-2 border-blue-500 p-6 text-center hover:bg-blue-500/40 transition-all group animate-slide-up" style={{ animationDelay: '200ms' }}>
+                  <Linkedin size={32} className="mx-auto mb-2 text-blue-400 group-hover:scale-110 transition-transform" />
+                  <div className="text-sm font-bold">LinkedIn</div>
+                  <div className="text-xs text-gray-400 mt-1 truncate">{building.contact.linkedin}</div>
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="bg-slate-900 p-4 border-t-4 border-white flex justify-between items-center">
+          <div className="text-xs text-gray-500">Press ESC to close</div>
+          <button 
+            onClick={() => { playSound('close'); onClose(); }}
+            className="bg-red-500 px-6 py-3 text-white border-b-4 border-red-700 active:border-b-0 active:translate-y-1 transition-all uppercase text-sm font-bold hover:bg-red-400 hover:scale-105"
           >
             Close [X]
           </button>
@@ -863,7 +991,7 @@ export default function App() {
           style={{
             width: MAP_WIDTH * TILE_SIZE,
             height: MAP_HEIGHT * TILE_SIZE,
-            backgroundImage: `linear-gradient(${isNight ? '#60a5fa' : '#000'} 1px, transparent 1px), linear-gradient(90deg, ${isNight ? '#60a5fa' : '#000'} 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(${isNight ? '#60a5fa' : '#000'} 1px, transparent 1px), linear-gradient(90deg, ${isNight ? '#60a5fa' : '#000'} 1px, transparent 1px)`, 
             backgroundSize: `${TILE_SIZE}px ${TILE_SIZE}px`
           }}
         />
