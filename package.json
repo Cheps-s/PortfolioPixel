@@ -16,18 +16,5 @@
     "tailwindcss": "^3.0.0",
     "postcss": "^8.4.0",
     "autoprefixer": "^10.4.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not ie<=11",
-      "not op_mini"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
