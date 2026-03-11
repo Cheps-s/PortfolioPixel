@@ -6,7 +6,33 @@
 
 @layer base {
   body {
-    @apply bg-pixel-dark text-white overflow-hidden;
+    @apply bg-stone-900 text-white overflow-hidden;
     font-family: 'Press Start 2P', cursive;
   }
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('https://fonts.googleapis.com/css2?family=Minecraft');
+}
+
+.font-minecraft {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 0.1em;
+}
+
+/* Minecraft-style button */
+button {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Grid background */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
